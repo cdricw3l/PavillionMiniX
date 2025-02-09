@@ -17,4 +17,4 @@ FDF version charpente.
 
 Ou 1 est la cote hors tout de la charpente;
 Ou 2 est le soubassement
-5 est la hauteur de courone2ent
+5 est la hauteur de couronnement
