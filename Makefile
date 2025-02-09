@@ -21,7 +21,7 @@ fclean: clean
 v: $(NAME)
 	valgrind --leak-check=full --log-file=filename  -s ./$(NAME)
 
-gdev:
+gdev: fclean
 	git add .
 	git commit -m $(NAME)/$(DATE) 
 	git push
