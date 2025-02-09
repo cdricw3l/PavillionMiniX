@@ -17,5 +17,7 @@ typedef struct s_pav
 
 } t_pav;
 
+int	manage_keyboard(int keycode, t_pav *pav);
+int	close_windows(t_pav *pav);
 
 #endif

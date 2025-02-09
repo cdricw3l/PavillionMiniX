@@ -1,7 +1,6 @@
 
 #include "../include/pavillion.h"
 
-
 t_pav *init_mlx(void)
 {
     t_pav *pav;
@@ -13,37 +12,6 @@ t_pav *init_mlx(void)
     if(!pav->mlx)
         return(NULL);
     return(pav);
-}
-
-int	close_windows(t_pav *pav)
-{
-	if (pav->win != NULL)
-		mlx_destroy_window(pav->mlx, pav->win);
-	if (pav->mlx != NULL)
-		mlx_destroy_display(pav->mlx);
-	free(pav);
-	return (0);
-}
-
-int	manage_keyboard(int keycode, t_pav *pav)
-{
-	
-	if (keycode == XK_Escape || keycode == 79933840)
-    {
-        printf("mlx win %p, mlx %p\n", pav->win, pav->mlx);
-		if (pav->win != NULL)
-        {
-		    mlx_destroy_window(pav->mlx, pav->win);
-            printf("fenetre detruite\n");
-        }
-        if (pav->mlx != NULL)
-        {
-            mlx_destroy_display(pav->mlx);
-            printf("Instqnce mlx detruite\n");
-        }
-        exit(0);
-    }
-	return (0);
 }
 
 int main(void)
