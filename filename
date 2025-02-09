@@ -1,0 +1,21 @@
+==52945== Memcheck, a memory error detector
+==52945== Copyright (C) 2002-2024, and GNU GPL'd, by Julian Seward et al.
+==52945== Using Valgrind-3.24.0 and LibVEX; rerun with -h for copyright info
+==52945== Command: ./pavillion
+==52945== Parent PID: 52939
+==52945== 
+==52945== 
+==52945== HEAP SUMMARY:
+==52945==     in use at exit: 152 bytes in 2 blocks
+==52945==   total heap usage: 216 allocs, 214 frees, 106,976 bytes allocated
+==52945== 
+==52945== LEAK SUMMARY:
+==52945==    definitely lost: 0 bytes in 0 blocks
+==52945==    indirectly lost: 0 bytes in 0 blocks
+==52945==      possibly lost: 0 bytes in 0 blocks
+==52945==    still reachable: 152 bytes in 2 blocks
+==52945==         suppressed: 0 bytes in 0 blocks
+==52945== Reachable blocks (those to which a pointer was found) are not shown.
+==52945== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==52945== 
+==52945== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

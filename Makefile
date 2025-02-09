@@ -1,4 +1,5 @@
 NAME=pavillion
+DATE=$(shell date | sed 's/ /_/g')
 CC= gcc
 GFLAGS = -Werror -Wall -Wextra -I./include/
 SRCS= $(wildcard src/*.c)
@@ -20,3 +21,7 @@ fclean: clean
 v: $(NAME)
 	valgrind --leak-check=full --log-file=filename  -s ./$(NAME)
 
+gdev:
+	git add .
+	git commit -m $(NAME)/$(DATE) 
+	git push

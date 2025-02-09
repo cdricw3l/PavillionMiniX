@@ -25,6 +25,27 @@ int	close_windows(t_pav *pav)
 	return (0);
 }
 
+int	manage_keyboard(int keycode, t_pav *pav)
+{
+	
+	if (keycode == XK_Escape || keycode == 79933840)
+    {
+        printf("mlx win %p, mlx %p\n", pav->win, pav->mlx);
+		if (pav->win != NULL)
+        {
+		    mlx_destroy_window(pav->mlx, pav->win);
+            printf("fenetre detruite\n");
+        }
+        if (pav->mlx != NULL)
+        {
+            mlx_destroy_display(pav->mlx);
+            printf("Instqnce mlx detruite\n");
+        }
+        exit(0);
+    }
+	return (0);
+}
+
 int main(void)
 {
     
@@ -38,6 +59,7 @@ int main(void)
     mlx_get_screen_size(pav->mlx, &size_x, &size_y);
     pav->win = mlx_new_window(pav->mlx,size_x / 2, size_y / 2, "pavillion" );
     mlx_hook(pav->win, 17, 1L << 0, close_windows, pav);
+    mlx_hook(pav->win, 2, 1L << 0, manage_keyboard, pav);
     mlx_loop(pav->mlx);
     return(0);
 }

@@ -6,6 +6,7 @@
 #include <stdlib.h>
 # include "../libft/libft.h"
 # include "../mlx_linux/mlx.h"
+# include <X11/keysym.h>
 
 #define DEBBUG printf("DEBBUG\n");
 
